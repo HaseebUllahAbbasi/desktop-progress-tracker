@@ -1,0 +1,29 @@
+{
+  "name": "desktop-progress-tracker",
+  "version": "1.0.0",
+  "description": "Electron app for the Progress Tracker application",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "vite build",
+    "start-react": "vite"
+  },
+  "repository": "git@github.com:HaseebUllahAbbasi/desktop-progress-tracker.git",
+  "author": "haseebullahabbasi <haseebabbasi00@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^25.2.0"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "bootstrap": "^5.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.1.1",
+    "react-router-dom": "^6.13.0",
+    "redux": "^4.2.1",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^2.4.2",
+    "vite": "^4.3.9"
+  }
+}
