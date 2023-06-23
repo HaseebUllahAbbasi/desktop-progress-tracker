@@ -1,19 +1,20 @@
+import React from "react";
 import { SITE } from "../constant";
-import './TodoList.css';
+import "./TodoList.css";
 
-const Home: React.FunctionComponent = () => {
+const Home = () => {
   const showNotification = () => {
-    if (Notification.permission === 'granted') {
+    if (Notification.permission === "granted") {
       const currentDate = new Date();
       const currentHour = currentDate.getHours();
 
       if (currentHour >= 0 && currentHour <= 23) {
-        const notification = new Notification('New Notification', {
-          body: 'Click to open the platform',
+        const notification = new Notification("New Notification", {
+          body: "Click to open the platform",
         });
 
-        notification.addEventListener('click', () => {
-          window.open(SITE, '_blank');
+        notification.addEventListener("click", () => {
+          window.open(SITE, "_blank");
         });
       }
     }
@@ -21,7 +22,7 @@ const Home: React.FunctionComponent = () => {
 
   const requestNotificationPermission = () => {
     Notification.requestPermission().then((permission) => {
-      if (permission === 'granted') {
+      if (permission === "granted") {
         // Permission granted, show notification every hour
         setInterval(() => {
           showNotification();
@@ -33,9 +34,14 @@ const Home: React.FunctionComponent = () => {
   return (
     <>
       <div className="container-custom">
-        <h1 className="text-center display-3 my-5">Welcome to the Home Page!</h1>
+        <h1 className="text-center display-3 my-5">
+          Welcome to the Home Page!
+        </h1>
         <div className="text-center">
-          <button className="btn btn-warning" onClick={requestNotificationPermission}>
+          <button
+            className="btn btn-warning"
+            onClick={requestNotificationPermission}
+          >
             Allow Notifications
           </button>
         </div>

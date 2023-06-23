@@ -5,25 +5,61 @@
   "main": "src/index.js",
   "scripts": {
     "start": "electron .",
-    "build": "vite build",
-    "start-react": "vite"
+    "build:vite": "vite build",
+    "start-react": "vite",
+    "build": {
+      "appId": "com.dot.progress.tracker",
+      "productName": "Progress-Tracker",
+      "directories": {
+        "output": "dist"
+      },
+      "files": [
+        "build/**/*",
+        "node_modules/**/*",
+        "main.js"
+      ],
+      "extends": null,
+      "mac": {
+        "category": "com.dot.progress.tracker",
+        "target": [
+          "dmg",
+          "zip"
+        ]
+      },
+      "win": {
+        "target": [
+          "nsis",
+          "zip"
+        ]
+      },
+      "linux": {
+        "target": [
+          "AppImage",
+          "deb",
+          "rpm"
+        ]
+      }
+    }
   },
   "repository": "git@github.com:HaseebUllahAbbasi/desktop-progress-tracker.git",
   "author": "haseebullahabbasi <haseebabbasi00@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "electron": "^25.2.0"
+    "electron": "^25.2.0",
+    "electron-builder": "^24.4.0"
   },
   "dependencies": {
     "axios": "^1.4.0",
     "bootstrap": "^5.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.10.1",
     "react-redux": "^8.1.1",
     "react-router-dom": "^6.13.0",
     "redux": "^4.2.1",
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.4.2",
+    "socket.io-client": "^4.7.0",
     "vite": "^4.3.9"
   }
 }

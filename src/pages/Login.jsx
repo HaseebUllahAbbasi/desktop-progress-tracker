@@ -33,7 +33,7 @@ const Login = () => {
 
       setPassword("");
       setPassword("");
-      navigate("/");
+      navigate("/home");
     } catch (error) {
       console.error("Error logging in:", error);
       // Handle the error as needed

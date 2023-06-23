@@ -2,6 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from '../pages/Login';
 import HeaderFooter from '../pages/HeaderFooter';
+import Home from '../pages/Home';
+import Todo from '../pages/Todo';
 // import Signup from '../pages/SignUp';
 // import Home from '../pages/Home';
 // import HourlyUpdatesPage from '../pages/Hourly';
@@ -19,6 +21,17 @@ const MainRoutes: React.FunctionComponent = () => {
         <Route path='/' element={<HeaderFooter>
           <Login />
         </HeaderFooter>}></Route>
+        <Route path='/login' element={<HeaderFooter>
+          <Login />
+        </HeaderFooter>}></Route>
+        <Route path='/home' element={<HeaderFooter>
+          <Home />
+        </HeaderFooter>}></Route>
+        <Route path='/to-do' element={<HeaderFooter>
+          <Todo />
+        </HeaderFooter>}></Route>
+
+
       </Routes>
     </Router>
   );

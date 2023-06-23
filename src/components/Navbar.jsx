@@ -30,12 +30,12 @@ const AppNavbar = () => {
             {user?._id && (
               <li
                 className={`nav-item ${
-                  location.pathname === "/" ? "active" : ""
+                  location.pathname === "/home" ? "active" : ""
                 }`}
               >
                 <Link
                   className="nav-link"
-                  to="/"
+                  to="/home"
                   style={{
                     color: `${
                       location.pathname === "/"
@@ -181,18 +181,18 @@ const AppNavbar = () => {
                   location.pathname === "/calender" ? "active" : ""
                 }`}
               >
-                <Link
+                <button
                   className="nav-link"
                   to="#"
                   onClick={() => {
                     alert("Logout");
                     dispatch(LogoutUser());
-                    navigate("/login");
+                    navigate("/");
                   }}
                   style={{ color: `'rgba(0, 0, 0, 0.7)'}`, fontWeight: "bold" }}
                 >
                   Logout
-                </Link>
+                </button>
               </li>
             )}
           </div>
